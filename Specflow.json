@@ -1,0 +1,11 @@
+﻿{
+    "specFlow": {
+        "plugins": [
+            {
+                "name": "SpecFlow.Plus.LivingDocPlugin",
+                "type": "Generator"
+            }
+        ],
+        "trace": { "traceSuccessfulSteps": true }
+    }
+}

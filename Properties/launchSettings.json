@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Googlesearch": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
