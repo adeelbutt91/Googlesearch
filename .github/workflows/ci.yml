@@ -33,7 +33,8 @@ jobs:
         id: paths
         shell: pwsh
         run: |
-          $dll = Get-ChildItem -Recurse -Filter *.dll | Where-Object { $_.FullName -match "bin\\Release\\net8.0" -and $_.Name -notmatch "testhost|nunit|SpecFlow" } | Select-Object -First 1
+          # Explicitly pick your SpecFlow test assembly instead of grabbing the first DLL
+          $dll = Get-ChildItem -Recurse -Filter Googlesearch.dll | Where-Object { $_.FullName -match "bin\\Release\\net8.0" } | Select-Object -First 1
           echo "dll=$($dll.FullName)" >> $env:GITHUB_OUTPUT
           $json = Join-Path $dll.Directory.FullName "TestExecution.json"
           echo "json=$json" >> $env:GITHUB_OUTPUT
